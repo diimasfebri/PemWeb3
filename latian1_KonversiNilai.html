@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Konversi Nilai</title>
+</head>
+	<style type="text/css">
+	/*mendesain halaman web*/
+	body {background-color: #F0E68C;}
+	h1 {font-family: fantasy; outline-color: black;}
+
+	</style>
+
+<script language="Javascript">
+	// mendeklarasikan fungsi
+	function test()
+	{
+	var nilai=document.kirim.N1.value
+
+	if (nilai>=81 && nilai<=100 ) 
+		document.kirim.N2.value ="A"
+	else if (nilai>=71 && nilai<=80) 
+		document.kirim.N2.value ="AB"
+	else if (nilai>=66 && nilai<=70) 
+		document.kirim.N2.value ="B"
+	else if (nilai>=61 && nilai<=65) 
+		document.kirim.N2.value ="BC"
+	else if (nilai>=56 && nilai<=60) 
+		document.kirim.N2.value ="C"
+	else if (nilai>=41 && nilai<=55) 
+		document.kirim.N2.value ="D"
+	else if (nilai<=40)
+		document.kirim.N2.value="E";
+	else alert("Harap memasukkan nilai yang benar!")
+	}
+</script>
+<div align="center">
+<body>
+	<!-- menampilkan text beserta inputan -->
+	<h1>CEK NILAIMU !</h1>
+	<form method="POST" name="kirim">
+	<p>Nilai : <input type="text" name="N1" size="20">
+	<br>
+	<br>
+	Nilai Abjad : <input type="text" name="N2" size="20"></p>
+	<!-- tombol untuk mengesekusi fungsi test -->
+	<p><input type="button" name="B1" value="Cek" onclick=test()>
+	<!-- Untuk menghapus data inputan -->
+	<input type="reset" name="button2">
+	</p>
+
+</body>
+</div>
+</html>

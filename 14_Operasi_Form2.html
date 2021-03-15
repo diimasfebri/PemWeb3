@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Program JavaScript</title>
+</head>
+<body>
+	<script language="JavaScript">
+		
+		//deklarasi fungsi
+		function ubahWarnaLB(warna) 
+		{
+			//untuk warna background
+			document.bgColor=warna;
+		}
+		function ubahWarnaLD(warna) 
+		{
+			//untuk warna font
+			document.fgColor=warna;
+		}
+	</script>
+
+
+	<h1>TES</h1>
+
+	<!--form untuk menampung elemen -->
+	<form>
+		<!-- tombol untuk mengubah warna dan background halaman web-->
+		<input type="button" value="Latar Belakang Hijau" onclick="ubahWarnaLB('green')">
+		<input type="button" value="Latar Belakang Putih" onclick="ubahWarnaLB('white')">
+		<input type="button" value="Text Kuning" onclick="ubahWarnaLD('Yellow')">
+		<input type="button" value="Text Biru" onclick="ubahWarnaLD('blue')">
+	</form>
+</body>
+</html>

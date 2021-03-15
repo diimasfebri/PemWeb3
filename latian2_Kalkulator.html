@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+</head>
+	<style type="text/css">
+	/*mendesain halaman web*/
+	body {background-color: #F0E68C;}
+	h1 {font-family: fantasy; outline-color: black;}
+	form  {font-family: monospace;outline-color: black;}
+	</style>
+<script language="Javascript">
+	// deklarasi fungsi-fungsi yang ada di kalkulator
+	function tambah()
+	{
+		var bil1= parseFloat(document.calc.bl1.value);
+		var bil2= parseFloat(document.calc.bl2.value);
+		if (isNaN(bil1)==false && isNaN(bil2)==false)
+		{
+		hasil = bil1+bil2;
+		document.calc.hasil.value = hasil;
+		}
+		else {alert("Mohon isi bilangan terlebih dahulu.")}
+	}
+
+
+	function kurang(){
+		var bil1= parseFloat(document.calc.bl1.value);
+		var bil2= parseFloat(document.calc.bl2.value);
+		if (isNaN(bil1)==false && isNaN(bil2)==false)
+		{
+		hasil = bil1-bil2;
+		document.calc.hasil.value = hasil;
+		}
+		else {alert("Mohon isi bilangan terlebih dahulu.")}
+	}
+
+
+	function kali(){
+		var bil1= parseFloat(document.calc.bl1.value);
+		var bil2= parseFloat(document.calc.bl2.value);
+		if (isNaN(bil1)==false && isNaN(bil2)==false)
+		{
+		hasil = bil1*bil2;
+		document.calc.hasil.value = hasil;
+		}
+		else {alert("Mohon isi bilangan terlebih dahulu.")}
+	}
+
+
+	function bagi(){
+		var bil1= parseFloat(document.calc.bl1.value);
+		var bil2= parseFloat(document.calc.bl2.value);
+		if (isNaN(bil1)==false && isNaN(bil2)==false)
+		{
+		hasil = bil1/bil2;
+		document.calc.hasil.value = hasil;
+		}
+		else {alert("Mohon isi bilangan terlebih dahulu.")}
+	}
+	
+</script>
+
+<div align="center">
+<body>
+<h1>Kalkulator Sederhana</h1>
+	<!-- Menampilkan text beserta inputan bilangan kalkulator -->
+<form name="calc">
+	<p>
+	<table align="center">
+	<tr>
+	<td align="center">Bilangan 1</td>
+	<td></td>
+	<td align="center">Bilangan 2</td>
+	</tr>
+	<tr>
+	<td> <input type="text" name="bl1" size="10"> </td>
+	<td></td>
+	<td> <input type="text" name="bl2" size="10"> </td>
+	</tr>
+	</table>
+	<br>
+	<table>
+	<tr>
+	<!-- mengesekusi bbilangan inputan yang diinginkan -->
+	<td align = "center" width="50"> <input type="button" value=" + " onclick="tambah()"> </td>
+	<td align = "center"  width="50"> <input type="button" value=" - " onclick="kurang()"> </td>
+	<td align = "center"  width="50"> <input type="button" value=" x " onclick="kali()"> </td>
+	<td align = "center"  width="50"> <input type="button" value=" : " onclick="bagi()"></td>
+	</tr>
+	</table>
+	<br>
+	<!-- menampilkan hasil dari operasi matematika yang diinputkan oleh user -->
+	<input type="text" name="hasil" value="" size="25" readonly="true">
+	<br>
+	<br>
+	<!-- mereset kembali inputan -->
+	<input type="reset" name="reset" value="CLEAR">
+	</p>
+</form>
+</div>
+</body>
+</html>

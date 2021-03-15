@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Form Input beserta Button</title>
+</head>
+	<script language="JavaScript">
+		//deklarasi fungsi
+		function test() 
+		{
+
+			//inisialisasi
+			var val1=document.kirim. T1. value
+
+			//if else untuk menentukan inputan user
+			if(val1%2==0)
+				document.kirim.T2. value="bilangan genap"
+			else
+				document.kirim.T2. value="bilangan Ganjil"
+		}
+	</script>
+<body>
+
+	<!--form untuk menampung elemen -->
+	<form method="POST" name="kirim">
+
+		<!--menampilkan text beserta kolom input-an -->
+		<p>BIL <input type="text" name="T1" size="20"> merupakan BIL <input type="text" name="T2" size="20"></p>
+		
+		<!--tombol pengeksekusi untuk memanggil script "test"-->
+		<p><input type="button" name="B1" value="TEBAK" onclick=test()></p>
+	</form>
+</body>
+</html>
